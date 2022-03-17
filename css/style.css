@@ -602,7 +602,6 @@
             background-color: var(--color-accent);
             transform: rotate(-45deg);
         }
-        /* Поиск */
         
         .form {
             display: none;

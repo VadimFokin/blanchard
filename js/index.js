@@ -163,7 +163,7 @@ let inputs = document.querySelectorAll('input[type="tel"]');
 let inputMask = new Inputmask('+7 (999) 999-99-99');
 inputMask.mask(inputs);
 
-new JustValidate('.form', {
+new JustValidate('.feedback__form', {
     rules: {
         fio: {
             required: true,
@@ -298,7 +298,7 @@ modalBtn.forEach(function(item) {
 });
 
 
-// // Отключаем скролл у сайта
+// Отключаем скролл у сайта
 
 let disableScroll = function() {
     let pagePosition = window.scrollY;
