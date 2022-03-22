@@ -85,7 +85,6 @@ let mySwiper2 = new Swiper(slider2, {
     slidesPerView: 1,
     slidesPerGroup: 1,
     spaceBetween: 10,
-    loop: true,
     pagination: {
         el: '.events__swiper-pagination',
         clickable: 'true',
@@ -112,7 +111,8 @@ let mySwiper2 = new Swiper(slider2, {
             slidesPerGroup: 3,
             spaceBetween: 50,
             navigation: {
-                nextEl: '.events__btn-next'
+                nextEl: '.events__btn-next',
+                prevEl: '.events__btn-prev'
             },
         },
     },
@@ -391,24 +391,4 @@ setSearch({
     searchClass: "js-form",
     activeClass: "is-opened",
     hiddenClass: "is-closed"
-});
-
-
-
-
-// Высота карточек в событиях
-function setEqualHeight(columns) {
-    var tallestcolumn = 0;
-    columns.each(
-        function() {
-            currentHeight = $(this).height();
-            if (currentHeight > tallestcolumn) {
-                tallestcolumn = currentHeight;
-            }
-        }
-    );
-    columns.height(tallestcolumn);
-}
-$(document).ready(function() {
-    setEqualHeight($(".event  > .event__text"));
 });

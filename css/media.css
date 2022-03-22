@@ -121,6 +121,7 @@
             margin-left: auto;
             margin-bottom: 2px;
         }
+        .events__btn-prev,
         .events__btn-next {
             display: none;
         }
@@ -225,6 +226,7 @@
             flex-direction: column;
             padding-left: 50px;
             padding-top: 120px;
+            padding-bottom: 10px;
             min-height: 677px;
         }
         .nav__header-item:not(:last-child) {
@@ -233,6 +235,7 @@
         .header__btn-enter-burger {
             display: inline-block;
             margin-left: 50px;
+            margin-bottom: 20px;
             width: 257px;
             min-height: 60px;
             color: var(--color-accent);
@@ -381,7 +384,8 @@
     
     @media (max-width: 768px) {
         .header__container {
-            padding-top: 13px;
+            padding-top: 29px;
+            padding-bottom: 26px;
         }
         .nav {
             min-height: 689px;
@@ -396,7 +400,7 @@
             width: 100%;
         }
         .hero__block-text {
-            padding-top: 196px;
+            padding-top: 211px;
             width: 100%;
         }
         .hero__descr {
@@ -433,13 +437,13 @@
             padding-bottom: 24px;
         }
         .catalog__accordion-content {
-            margin-bottom: 53px;
+            margin-bottom: 52px;
         }
         .pointer-content__artist {
-            margin-bottom: 25px;
+            margin-bottom: 26px;
         }
         .pointer-content__title {
-            margin-bottom: 5px;
+            margin-bottom: 7px;
         }
         .accordion__content-left {
             width: 40.4%;
@@ -448,11 +452,11 @@
             max-width: 668px;
         }
         .event__text {
-            padding: 14px 17px 48px 36px;
+            padding: 12px 17px 51px 36px;
             min-height: 482px;
         }
         .projects {
-            padding-bottom: 79px;
+            padding-bottom: 78px;
         }
         .projects__descr {
             margin-bottom: 26px;
@@ -486,6 +490,7 @@
             padding: 11px 27px;
         }
         .form__contacts {
+            margin-bottom: 11px;
             width: 323px;
         }
         .form__contacts--mobile {
@@ -504,6 +509,9 @@
         .form {
             padding: 13px 0 28px 0;
             width: 87%;
+        }
+        .js-validate-error-label {
+            top: -31px;
         }
     }
     
@@ -526,6 +534,10 @@
         }
         .accordion__painter-list {
             column-count: 1;
+        }
+        .form__contacts {
+            margin-right: 0;
+            margin-bottom: 20px;
         }
         .modal__content {
             min-height: 620px;
@@ -565,7 +577,7 @@
         }
         .header__container {
             justify-content: space-between;
-            padding: 10px 15px 8px 15px;
+            padding: 12px 15px 8px 15px;
         }
         .burger {
             width: 20px;
@@ -627,7 +639,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 75px 15px 45px 17px;
+            padding: 77px 15px 45px 17px;
             width: 100%;
         }
         .hero__text-title {
@@ -651,14 +663,14 @@
             padding: 50px 0 41px 0;
         }
         .gallery {
-            padding: 50px 0 49px 0;
+            padding: 50px 0;
         }
         .gallery__container {
             flex-direction: column;
             align-items: flex-start;
         }
         .gallery__text {
-            margin-bottom: 3px;
+            margin-bottom: 5px;
             font-size: 16px;
             line-height: 32px;
         }
@@ -691,6 +703,7 @@
             position: relative;
             width: 69px;
             top: -4px;
+            left: 0;
         }
         .btn-next {
             margin-right: 2px;
@@ -873,6 +886,9 @@
             margin-bottom: 20px;
             padding: 3px 43px 3px 23px;
             width: 290px;
+        }
+        .js-validate-error-label {
+            top: -26px;
         }
         .form__btn {
             display: none;

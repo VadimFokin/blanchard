@@ -305,8 +305,8 @@
     </header>
 
     <main class="main">
-        <h1 class="visually-hidden">Blanchard-Художественная галерея</h1>
         <section class="hero">
+            <h1 class="visually-hidden">Blanchard-Художественная галерея</h1>
             <div class="swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide promo-1"></div>
@@ -318,7 +318,7 @@
                 <div class="hero__block-text">
                     <p class="hero__text-title"><strong>Прикоснитесь к прекрасному</strong></p>
                     <p class="hero__descr">Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
-                    <a href="#" class="hero__link text-btn">Подписаться на&nbsp;рассылку</a>
+                    <a href="#feedback" class="hero__link text-btn">Подписаться на&nbsp;рассылку</a>
                 </div>
             </div>
         </section>
@@ -817,6 +817,7 @@
             <div class="container events__container">
                 <h2 class="site-title events__title">События</h2>
 
+                <div class="events__btn-prev events__prev"></div>
                 <div class="events__btn-next events__next"></div>
                 <div class="events__swiper">
                     <ul class="swiper-wrapper list-reset">
@@ -834,7 +835,7 @@
                                     <span class="event__block-text-small">с 20 марта по 30 апреля</span>
                                 </div>
                                 <h3 class="event__subtitle text-subtitle">Книжная гравюра в живом восприятии</h3>
-                                <p class="site-descr event__descr">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо. </p>
+                                <p class="site-descr event__descr">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо.</p>
                                 <a href="#header" class="event__link">Подробнее</a>
                             </div>
 
@@ -921,10 +922,12 @@
                     Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не уникальными данными до степени совершенной
                     неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде всего, постоянное информационно-пропагандистское <button class="btn-reset tooltip" data-tippy-content="Пример современных тенденций
                     - современная методология разработки
-                    ">i</button> обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей оппозиции могут быть рассмотрены <button class="btn-reset tooltip"
-                        data-tippy-content="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции">i</button> исключительно в разрезе маркетинговых и финансовых <button class="btn-reset tooltip
-                    " data-tippy-content="В стремлении повысить качество">i</button> предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям, которые, в свою очередь, должны
-                    быть смешаны с не уникальными данными до степени совершенной неузнаваемости. Подробнее:
+                    " aria-label="Всплывающая подсказка"></button> обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей оппозиции могут быть
+                    рассмотрены
+                    <button class="btn-reset tooltip" data-tippy-content="Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции" aria-label="Всплывающая подсказка"></button> исключительно в разрезе маркетинговых и
+                    финансовых <button class="btn-reset tooltip
+                    " data-tippy-content="В стремлении повысить качество" aria-label="Всплывающая подсказка"></button> предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям,
+                    которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости. Подробнее:
                     <a href="#" class="projects__link">blanchard-art.ru/projects</a>
                 </p>
                 <h3 class="projects__subtitle text-subtitle">Партнёры проектов:</h3>
@@ -988,7 +991,8 @@
             </div>
         </section>
 
-        <section class="feedback">
+        <section class="feedback" id="feedback">
+            <h2 class="visually-hidden">Форма оформления заказа</h2>
             <div class="feedback__wrapper" id="contacts">
                 <address class="feedback__address"><span class="feedback__address-text">Шоурум №4</span>
                         <span class="feedback__address-descr site-descr">Леонтьевский переулок, дом 5/1</span></address>
@@ -1033,7 +1037,7 @@
                     13.4832 22.9575 12.8354 22.9435C12.1213 22.9281 10.7477 22.5397 9.72652 22.2078C8.474 21.8007 7.47852 21.5854 7.56524 20.8939C7.61036 20.5338 8.10632 20.1655 9.05308 19.789L9.05312 19.7889Z" fill="white"/>
                                         <defs>
                                         <linearGradient id="paint0_linear_136320_63" x1="20" y1="0" x2="20" y2="39.7033" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#2AABEE"/>
+                                        <stop offset="1" stop-color="#2AABEE"/>
                                         <stop offset="1" stop-color="#229ED9"/>
                                         </linearGradient>
                                         </defs>
@@ -1089,8 +1093,7 @@
         </div>
     </footer>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
-    </script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU"></script>
     <script src="libs/inputmask.min.js"></script>
     <script src="libs/just-validate.min.js"></script>
     <script src="libs/simplebar.js"></script>
