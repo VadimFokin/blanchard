@@ -159,9 +159,9 @@ element.closest('.choices').setAttribute('aria-label', ariaLabel);
 
 
 // Маска валидации
-let inputs = document.querySelectorAll('input[type="tel"]');
-let inputMask = new Inputmask('+7 (999) 999-99-99');
-inputMask.mask(inputs);
+let inputs = document.querySelector('input[type="tel"]');
+let im = new Inputmask("+7 (999)-999-99-99");
+im.mask(inputs);
 
 new JustValidate('.feedback__form', {
     rules: {
@@ -173,14 +173,15 @@ new JustValidate('.feedback__form', {
         tel: {
             required: true,
             function: (name, value) => {
-                const phone = selector.inputmask.unmaskedvalue()
+                const phone = inputs.inputmask.unmaskedvalue()
                 return Number(phone) && phone.length === 10
             }
-        },
-    },
+        }
+    }
 });
 
-let inputText = document.querySelector('.form__contacts');
+
+let inputText = document.querySelector('.feedback__form-contacts');
 
 inputText.addEventListener('keyup', function() {
     this.style.backgroundColor = 'white';
@@ -276,6 +277,8 @@ btns.forEach((el) => {
     el.addEventListener('click', (e) => {
         let path = e.currentTarget.getAttribute('data-path');
 
+        document.body.style.overflow = 'hidden';
+
         modals.forEach((el) => {
             el.classList.remove('modal__content--visible');
         });
@@ -286,45 +289,30 @@ btns.forEach((el) => {
     });
 });
 
+modalOverlay.addEventListener('click', (e) => {
+
+    if (e.target == modalOverlay) {
+        modalOverlay.classList.remove('modal__overlay--visible');
+
+        document.body.style.overflow = '';
+
+        modals.forEach((el) => {
+            el.classList.remove('modal__content--visible');
+        });
+    }
+});
+
 modalBtn.forEach(function(item) {
 
     item.addEventListener('click', function(e) {
         let parentModal = this.closest('.modal__overlay');
 
+        document.body.style.overflow = '';
+
         parentModal.classList.remove('modal__overlay--visible');
         modalOverlay.classList.remove('modal__overlay--visible');
     });
 
-});
-
-
-// Отключаем скролл у сайта
-
-let disableScroll = function() {
-    let pagePosition = window.scrollY;
-    document.body.classList.add('disable-scroll');
-    document.body.dataset.position = pagePosition;
-    document.body.style.top = -pagePosition + 'px';
-}
-
-let enableScroll = function() {
-    let pagePosition = parseInt(document.body.dataset.position, 10);
-    document.body.style.top = 'auto';
-    document.body.classList.remove('disable-scroll');
-    window.scroll({ top: pagePosition, left: 0 });
-    document.body.removeAttribute('data-position');
-}
-
-btns.forEach(function(el) {
-    el.addEventListener('click', () => {
-        disableScroll();
-    });
-});
-
-modalBtn.forEach(function(el) {
-    el.addEventListener('click', () => {
-        enableScroll();
-    });
 });
 
 
